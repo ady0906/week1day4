@@ -1,0 +1,33 @@
+// LOOKING AT FUNCTIONS AND CALLBACKS
+//
+//   Almost everything in JavaScript is an object
+//
+//   Functions are treated as first class objects -> functions can be stored inside of variables
+
+
+var calculateTotal = function() {
+  var total = 0;
+  for (var i = 0; i < this.prices.length; i++) {
+    total += this.prices[i];
+  }
+  return total;
+}
+
+
+
+var cart = {
+  prices: [24, 125.12, 62],
+  calculateTotal: calculateTotal
+};
+
+var total = cart.calculateTotal(); // PUTTING FUNCTION INSIDE OBJECT
+console.log(total);
+
+// Main purpose of functions: TO COMPARMENTALIZE LOGIC
+
+
+// When calling a function before its declaration = FUNCTION HOISTING
+
+  // Can't work if function is declared as a variable
+
+// Get comfortable with using const & let
